@@ -1,0 +1,189 @@
+Question 1							Larry Altman
+
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+int guests;
+char stay;
+const double DISCOUNT = .2;
+double total, roomWithDiscount;
+
+cout << "How many guests are checking in? : ";
+cin >> guests;
+
+if (guests >= 1 && guests <= 2)
+{
+total = 85;
+cout << "Is this a company visit? Enter Y for yes or N for no. : ";
+cin >> stay;
+    if (stay == 'Y')
+    {
+    roomWithDiscount = total - (total * DISCOUNT);
+    cout << "The total cost of the room is $" << roomWithDiscount;
+    }
+    else
+    cout << "The total cost of the room is $" << total;
+}
+
+else if (guests == 3)
+{
+total = 90;
+cout << "Is this a company visit? Enter Y for yes or N for no. : ";
+cin >> stay;
+    if (stay == 'Y')
+    {
+    roomWithDiscount = total - (total * DISCOUNT);
+    cout << "The total cost of the room is $" << roomWithDiscount;
+    }
+    else
+    cout << "The total cost of the room is $" << total;
+}
+
+else if (guests == 4)
+{
+total = 95;
+cout << "Is this a company visit? Enter Y for yes or N for no. : ";
+cin >> stay;
+    if (stay == 'Y')
+    {
+    roomWithDiscount = total - (total * DISCOUNT);
+    cout << "The total cost of the room is $" << roomWithDiscount;
+    }
+    else
+    cout << "The total cost of the room is $" << total;
+}
+
+else if (guests > 4)
+{
+total = 95 + ((guests - 4) * 6);
+cout << "Is this a company visit? Enter Y for yes or N for no. : ";
+cin >> stay;
+    if (stay == 'Y')
+    {
+    roomWithDiscount = total - (total * DISCOUNT);
+    cout << "The total cost of the room is $" << roomWithDiscount;
+    }
+    else
+    cout << "The total cost of the room is $" << total;
+}
+
+else
+cout << "Invalid entry.";
+}
+
+
+
+_____________________________________________________________________________________
+
+
+
+Question 2
+
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+double length, width, area, total;
+const double FLATRATE = 200;
+int drawers;
+
+cout << "Enter the length of the desk in inches: ";
+cin >> length;
+
+cout << "Enter the width of the desk in inches: ";
+cin >> width;
+
+cout << "Enter the number of drawers the desk will have: ";
+cin >> drawers;
+
+area = length * width;
+
+if (area > 0)
+{
+	if (area > 750)
+	{
+	total = FLATRATE + 50;
+	total = total + (drawers * 30);
+	cout << "The total cost of the desk is $ " << total;
+	}
+	
+	else
+	{
+	total = FLATRATE + (drawers * 30);
+	cout << "The total cost of the desk is $ " << total;
+	}
+}
+
+else
+cout << "Invalid entry. Length and width must both be positive numbers.";
+}
+
+
+
+
+_____________________________________________________________________________________
+
+
+
+Question 3
+
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+double weight;
+
+cout << "Enter the weight of the dog in pounds: ";
+cin >> weight;
+
+if (weight > 0)
+{
+	if (weight < 15)
+	cout << "The total weekly bill for the day care is $55";
+	
+	else if (weight >= 15 && weight <= 30)
+	cout << "The total weekly bill for the day care is $75";
+	
+	else if (weight >= 31 && weight <= 80)
+	cout << "The total weekly bill for the day care is $105";
+	
+	else
+	cout << "The total weekly bill for the day care is $125";
+}
+
+else
+cout << "Invalid entry.";
+}
+
+
+
+_____________________________________________________________________________________
+
+
+
+Question 4
+
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+const int TUITION = 15000;
+double rate = .04;
+int count = 0;
+
+while (count < 10)
+{
+	cout << "The tuition for the following year will be $" << TUITION + (TUITION * rate) << endl;
+	rate = rate + .04;
+	count = count + 1;
+}
+}
